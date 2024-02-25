@@ -10,11 +10,9 @@ package ipc1_proyecto1_202100086;
  */
 public class IPC1_Proyecto1_202100086 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
     }
     
 }
