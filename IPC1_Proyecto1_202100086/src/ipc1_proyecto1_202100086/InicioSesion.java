@@ -17,6 +17,13 @@ public class InicioSesion extends JFrame {
         this.setTitle("Inicio De Sesion");
         //setBounds se acomodan los detalles en la ventana
         this.setBounds(200,300,600,450);
+        
+        this.setLocationRelativeTo(null);
+        
+        //para que se mire la ventana
+        this.setVisible(true);
+        //para que cierre el programa cuando se seleccion el boton "x"
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
 }
