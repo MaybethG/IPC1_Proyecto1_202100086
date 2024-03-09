@@ -12,13 +12,15 @@ public class Doctor {
     private int codigo;
     private String nombre;
     private String genero;
+    private String contraseña; 
     private String especialidad;
     private int telefono;   
     private int edad;
 
-    public Doctor(int codigo, String nombre, String genero, String especialidad, int telefono, int edad) {
+    public Doctor(int codigo, String nombre, String contraseña, String genero, String especialidad, int telefono, int edad) {
         this.codigo = codigo;
         this.nombre = nombre;
+        this.nombre = contraseña;
         this.genero = genero;
         this.especialidad = especialidad;
         this.telefono = telefono;
@@ -57,6 +59,17 @@ public class Doctor {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    /**
+     * @param contraseña the contraseña to set
+     */
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     /**

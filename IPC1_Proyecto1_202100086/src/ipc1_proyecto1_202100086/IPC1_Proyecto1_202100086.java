@@ -17,13 +17,9 @@ public class IPC1_Proyecto1_202100086 {
 
     public static int codigo=1;
     
-    public static void main(String[] args) {
-        
-        ListaDoc.add(new Doctor(1, "Luis Gomez", "Hombre", "Pediatra",11111111,35));        
-        ListaDoc.add(new Doctor(2, "Maria Ramirez", "Mujer", "Neurologa ",11112222,32));         
+    public static void main(String[] args) {         
         
         InicioSesion ventana_inicio = new InicioSesion();
-       RegistroDoc ventana_regdog = new RegistroDoc();
 
     }
     
@@ -40,8 +36,9 @@ public class IPC1_Proyecto1_202100086 {
             arreglo[i][1]=Doctor_.getNombre();
             arreglo[i][2]=Doctor_.getGenero();
             arreglo[i][3]=Doctor_.getEspecialidad();
-            arreglo[i][4]=Doctor_.getTelefono();
-            arreglo[i][5]=Doctor_.getEdad();
+            arreglo[i][4]=Doctor_.getContraseña();
+            arreglo[i][5]=Doctor_.getTelefono();
+            arreglo[i][6]=Doctor_.getEdad();
         }
         
         return arreglo;
@@ -49,8 +46,8 @@ public class IPC1_Proyecto1_202100086 {
     
     // clase nueva para agregar doctores
     
-    public static void agregarDoctor(int codigo,String nombre, String genero, String especialidad,int telefono, int edad){
-        ListaDoc.add(new Doctor(codigo,nombre,genero,especialidad,telefono,edad));
+    public static void agregarDoctor(int codigo,String nombre, String genero, String contraseña, String especialidad,int telefono, int edad){
+        ListaDoc.add(new Doctor(codigo,nombre,genero,contraseña,especialidad,telefono,edad));
     }
     
 }

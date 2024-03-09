@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ipc1_proyecto1_202100086;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -12,11 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
 import javax.swing.JTextField;
-import jdk.jshell.execution.Util;
 /**
  *
  * @author Fati
@@ -127,7 +122,7 @@ public class RegistroDoc extends JFrame implements ActionListener{
             String edadD = edadDRtxt.getText();
             String selecgenero = (String) generoComboBox.getSelectedItem();
             
-            IPC1_Proyecto1_202100086.agregarDoctor(IPC1_Proyecto1_202100086.codigo, nombreD, especialidad, contraseña, telefonoD,edadD,selecgenero);
+            //IPC1_Proyecto1_202100086.agregarDoctor(IPC1_Proyecto1_202100086.codigo, nombreD, especialidad,contraseña, telefonoD,edadD,selecgenero);
             IPC1_Proyecto1_202100086.codigo++;
         }
     }
