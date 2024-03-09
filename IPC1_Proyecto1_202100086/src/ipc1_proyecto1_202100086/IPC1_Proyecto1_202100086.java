@@ -13,6 +13,7 @@ public class IPC1_Proyecto1_202100086 {
     public static void main(String[] args) {
         InicioSesion ventana_inicio = new InicioSesion();
         RegistroPaciente ventana_registroP = new RegistroPaciente();
+        Administrador ventana_admin = new Administrador();
     }
     
 }
