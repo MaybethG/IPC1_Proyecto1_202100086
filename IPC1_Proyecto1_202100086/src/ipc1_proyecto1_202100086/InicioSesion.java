@@ -101,8 +101,17 @@ public class InicioSesion extends JFrame implements ActionListener{
            String contraseña = new String(contraseñatxt.getPassword());
            System.out.println("Nombre: " + codigo);
            System.out.println("Contraseña: " + contraseña);
+           
+           if(codigo.equals("202100086") && contraseña.equals("proyecto1IPC1")){
+               Administrador ventana_admin = new Administrador();
+               this.dispose();
+               
+           }
+           
         }else if (J.getActionCommand().equals("Registrate")){
         System.out.println("Registro nuevo");
+        RegistroPaciente ventana_registroP = new RegistroPaciente();
+               this.dispose();
     }
        }
     

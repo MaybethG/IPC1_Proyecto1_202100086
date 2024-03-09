@@ -10,7 +10,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import jdk.jshell.execution.Util;
 /**
@@ -27,6 +29,18 @@ public class Administrador extends JFrame implements ActionListener{
      JPanel pestaña2= new JPanel(null);
      JPanel pestaña3= new JPanel(null);
      
+     //pestaña 1
+     String[] Codigo= {"Codigo" ,"Nombre Completo", "Genero", "Especialidad","Telefono","Edad"};
+     
+     JTable tabladoctor= new JTable(IPC1_Proyecto1_202100086.convercionDoc(),Codigo);
+     
+     //detalle para un mejor acceso a los datos
+     JScrollPane scrollP= new JScrollPane(tabladoctor);
+     
+     scrollP.setBounds(30, 90, 600, 500);
+     pestaña1.add(scrollP);
+     
+    
      //hacer que el panel de pestañas se vea
      getContentPane().add(panel);
      

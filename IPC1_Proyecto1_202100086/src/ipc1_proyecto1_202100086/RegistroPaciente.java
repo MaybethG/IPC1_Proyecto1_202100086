@@ -97,6 +97,7 @@ public class RegistroPaciente extends JFrame implements ActionListener{
            System.out.println("Nombre: " + nombre);
            System.out.println("Contraseña: " + contraseña);
        }
+               this.dispose();
     }
     
     
