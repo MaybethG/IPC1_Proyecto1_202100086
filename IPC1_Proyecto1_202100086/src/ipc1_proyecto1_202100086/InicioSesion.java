@@ -20,6 +20,11 @@ public class InicioSesion extends JFrame implements ActionListener{
     private JPasswordField contraseñatxt;
     
     public InicioSesion(){
+        //titulo de la ventana
+        JLabel titleLabel = new JLabel("Inicio Sesion");
+        titleLabel.setBounds(215,2,100, 50);
+        this.add(titleLabel);
+        
         //imagen en la ventana
         ImageIcon iconoinicio = new ImageIcon(getClass().getResource("../imagenes/icono-inicio.jpg")) ;
         Image dimensiones= iconoinicio.getImage().getScaledInstance(90,90,Image.SCALE_SMOOTH);
@@ -27,7 +32,7 @@ public class InicioSesion extends JFrame implements ActionListener{
         
         //mostrar la imagen
         JLabel imagenLabel = new JLabel(ajustesicono);
-        imagenLabel.setBounds(190,30,120,100);
+        imagenLabel.setBounds(190,40,120,100);
         this.add(imagenLabel);
         
         
@@ -57,11 +62,17 @@ public class InicioSesion extends JFrame implements ActionListener{
         iniciobutton.addActionListener(this);
         this.add(iniciobutton);
         
+        JButton registrobutton = new JButton("Registrate");
+        registrobutton.setBounds(180, 280, 150, 35);
+        registrobutton.setBackground(new Color(82, 255, 247));
+        registrobutton.addActionListener(this);
+        this.add(registrobutton);
+        
         
         //this es porque es a esa ventana en especifico
         this.setTitle("Inicio De Sesion");
         //setBounds se acomodan los detalles en la ventana
-        this.setBounds(150,200,500,350);
+        this.setBounds(150,210,500,360);
         //localizacion de la ventana -medio-
         this.setLocationRelativeTo(null);
         //es para que al poner mas elementos los podamos ubicar con libertad
@@ -77,9 +88,12 @@ public class InicioSesion extends JFrame implements ActionListener{
     @Override
     //se colocan los eventos de los botones
     public void actionPerformed(ActionEvent J) {
+        //Entre comillas el texto que dice el boton
         if(J.getActionCommand().equals("Ingreso de sesion")){
             System.out.println("Inicio");
-        }
+        }else if (J.getActionCommand().equals("Registrate")){
+        System.out.println("Registro nuevo");
+    }
        }
     
 }
