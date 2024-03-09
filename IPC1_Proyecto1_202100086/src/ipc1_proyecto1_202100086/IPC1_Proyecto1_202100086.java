@@ -15,6 +15,8 @@ public class IPC1_Proyecto1_202100086 {
     //lista dinamica para los datos de doctor
     public static ArrayList<Doctor> ListaDoc = new ArrayList<>();
 
+    public static int codigo=1;
+    
     public static void main(String[] args) {
         
         ListaDoc.add(new Doctor(1, "Luis Gomez", "Hombre", "Pediatra",11111111,35));        
@@ -47,8 +49,8 @@ public class IPC1_Proyecto1_202100086 {
     
     // clase nueva para agregar doctores
     
-    public static void agregarDoctor(int codigo,String nombre, String genero, String especialidad, int telefono, int edad){
-        ListaDoc.add(new Doctor(nombre,especialidad,telefono,edad,genero));
+    public static void agregarDoctor(int codigo,String nombre, String genero, String especialidad,int telefono, int edad){
+        ListaDoc.add(new Doctor(codigo,nombre,genero,especialidad,telefono,edad));
     }
     
 }

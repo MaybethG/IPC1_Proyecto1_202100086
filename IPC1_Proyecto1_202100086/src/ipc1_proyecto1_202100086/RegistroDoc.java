@@ -120,8 +120,15 @@ public class RegistroDoc extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == registroDbtn){
+            String nombreD = nombreDRtxt.getText();
+            String especialidad = especialidadDRtxt.getText();
+            String contraseña = new String(contraseñaDRtxt.getPassword());
+            String telefonoD = telefonoDRtxt.getText() ;    
+            String edadD = edadDRtxt.getText();
+            String selecgenero = (String) generoComboBox.getSelectedItem();
             
-            ListaDoc
+            IPC1_Proyecto1_202100086.agregarDoctor(IPC1_Proyecto1_202100086.codigo, nombreD, especialidad, contraseña, telefonoD,edadD,selecgenero);
+            IPC1_Proyecto1_202100086.codigo++;
         }
     }
     
