@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -22,6 +23,8 @@ public class RegistroPaciente extends JFrame implements ActionListener{
     private JPasswordField contraseñaRtxt;
     private JTextField edadRtxt;    
 
+    private JComboBox<String> generoComboBox;
+    
     public RegistroPaciente(){
         //titulo de la ventana
         JLabel titleLabel = new JLabel("Registro Paciente");
@@ -48,6 +51,12 @@ public class RegistroPaciente extends JFrame implements ActionListener{
         JLabel generoLabel = new JLabel("Genero");
         generoLabel.setBounds(70,240,80,20);
         this.add(generoLabel);
+        
+        //combo box para elegir una de las dos opciones
+        String[] genero = {"Masculino", "Femenino"};
+        generoComboBox = new JComboBox<> (genero);
+        generoComboBox.setBounds(160, 240,200, 20);
+        this.add(generoComboBox );
         
         JButton regbutton = new JButton("Registro");
         regbutton.setBounds(180, 280, 150, 35);

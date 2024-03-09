@@ -21,8 +21,8 @@ public class IPC1_Proyecto1_202100086 {
         ListaDoc.add(new Doctor(2, "Maria Ramirez", "Mujer", "Neurologa ",11112222,32));         
         
         InicioSesion ventana_inicio = new InicioSesion();
-        //RegistroPaciente ventana_registroP = new RegistroPaciente();
-        //Administrador ventana_admin = new Administrador();
+       RegistroDoc ventana_regdog = new RegistroDoc();
+
     }
     
     //lista estatica para los datos
@@ -43,6 +43,12 @@ public class IPC1_Proyecto1_202100086 {
         }
         
         return arreglo;
+    }
+    
+    // clase nueva para agregar doctores
+    
+    public static void agregarDoctor(int codigo,String nombre, String genero, String especialidad, int telefono, int edad){
+        ListaDoc.add(new Doctor(nombre,especialidad,telefono,edad,genero));
     }
     
 }

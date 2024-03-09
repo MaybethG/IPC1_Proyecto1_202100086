@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ipc1_proyecto1_202100086;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -24,7 +23,7 @@ public class Administrador extends JFrame implements ActionListener{
  public Administrador(){
      
      
-     JButton exitbutton;
+     JButton salirbtn;
      
      //Panel para las pestañas del Administrador 
      JTabbedPane panel = new JTabbedPane(JTabbedPane.TOP);
@@ -33,11 +32,11 @@ public class Administrador extends JFrame implements ActionListener{
      JPanel pestaña2= new JPanel(null);
      JPanel pestaña3= new JPanel(null);
      
-        exitbutton = new JButton("Salir");
-        exitbutton.setBounds(180, 240, 150, 35);
-        exitbutton.setBackground(new Color(82, 255, 247));
-        exitbutton.addActionListener(this);
-        pestaña1.add(exitbutton);
+        salirbtn = new JButton("Salir");
+        salirbtn.setBounds(720, 490, 150, 35);
+        salirbtn.setVisible(true);
+        salirbtn.addActionListener(this);
+        pestaña1.add(salirbtn);
      
      
      
@@ -69,10 +68,9 @@ public class Administrador extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == "Salir"){
-            this.dispose();
-            InicioSesion ventana_inicio= new InicioSesion();
-        }
+        if(e.getActionCommand().equals("Salir")){
+               this.dispose();
+               InicioSesion ventana_inicio = new InicioSesion();
     }
     
-}
+}}
