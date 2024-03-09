@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -106,6 +107,8 @@ public class InicioSesion extends JFrame implements ActionListener{
                Administrador ventana_admin = new Administrador();
                this.dispose();
                
+           }else{
+               JOptionPane.showMessageDialog(this, "Error de ingreso", "Codigo o contraseña imcorrectos", 0);
            }
            
         }else if (J.getActionCommand().equals("Registrate")){
