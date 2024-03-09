@@ -37,7 +37,7 @@ public class InicioSesion extends JFrame implements ActionListener{
         
         
         //etiqueta para identificar el campo de texto
-        JLabel usuarioLabel = new JLabel("Nombre");
+        JLabel usuarioLabel = new JLabel("Codigo");
         usuarioLabel.setBounds(70,160,80,20);
         this.add(usuarioLabel);
         
@@ -89,8 +89,12 @@ public class InicioSesion extends JFrame implements ActionListener{
     //se colocan los eventos de los botones
     public void actionPerformed(ActionEvent J) {
         //Entre comillas el texto que dice el boton
+                //para obtener los datos
         if(J.getActionCommand().equals("Ingreso de sesion")){
-            System.out.println("Inicio");
+           String codigo = usuariotxt.getText();
+           String contraseña = new String(contraseñatxt.getPassword());
+           System.out.println("Nombre: " + codigo);
+           System.out.println("Contraseña: " + contraseña);
         }else if (J.getActionCommand().equals("Registrate")){
         System.out.println("Registro nuevo");
     }
